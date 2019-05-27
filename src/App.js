@@ -7,8 +7,9 @@ import Highlights from "./components/highlights";
 import Pricing from "./components/pricing";
 import Location from "./components/location";
 import Footer from "./components/header_footer/Footer";
+import { Element } from "react-scroll";
 
-function App() {
+const App = () => {
   return (
     <div
       className="App"
@@ -17,14 +18,29 @@ function App() {
       }}
     >
       <Header />
-      <Feature />
-      <VenueInfo />
-      <Highlights />
-      <Pricing />
-      <Location />
+      <Element name="featured">
+        <Feature />
+      </Element>
+
+      <Element name="venueInfo">
+        <VenueInfo />
+      </Element>
+
+      <Element name="highlights">
+        <Highlights />
+      </Element>
+
+      <Element name="pricing">
+        <Pricing />
+      </Element>
+
+      <Element name="location">
+        <Location />
+      </Element>
+
       <Footer />
     </div>
   );
-}
+};
 
 export default App;
