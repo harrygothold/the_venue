@@ -7,6 +7,7 @@ const MyButton = props => {
   return (
     <Button
       variant="contained"
+      href={props.link}
       size="small"
       style={{
         background: props.bck,
